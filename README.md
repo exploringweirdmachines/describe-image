@@ -19,6 +19,12 @@ Bye
 ```
 ![Alt text](/resources/img_description.gif)
 
+
+## The target image
+'give_thanks.png' image can be found in the folder named 'resources'. 
+
+![Alt text](/resources/give_thanks.png)
+
 # Requirements
 
 My setup is:
