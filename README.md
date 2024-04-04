@@ -5,15 +5,17 @@ Image-to-text. A tool that can be used to describe an image.
 # Usage
 
 ```bash
-usage: main.py [-h] [-v] -i some image
+usage: main.py [-h] [-v] -i some image [-p prompt]
 
-Describe content of an image.
+Describe content of an image
 
 options:
   -h, --help            show this help message and exit
   -v, --version         show program's version number and exit
   -i some image, --input some image
-                        Path to the image
+                        path to the image
+  -p prompt, --prompt prompt
+                        optional custom prompt
 
 Bye
 ```

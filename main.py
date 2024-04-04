@@ -49,7 +49,7 @@ def process_image(path_input: str, prompt: str = config.prompt.default_prompt) -
     image = Image.open(f"{path_input}")
     enc_image = model.encode_image(image)
 
-    image_description = model.answer_question(enc_image, prompt, tokenizer)
+    image_description = model.answer_question(enc_image, str(prompt), tokenizer)
 
     logger.info(f"Using prompt: {prompt}. Image description is at follows: {image_description}")
 
@@ -63,7 +63,8 @@ def create_parser():
     )
     parser.add_argument("-v", "--version", dest="version", action="version", version=f"%(prog)% {config.version}")
 
-    parser.add_argument("-i", "--input", type=str, required=True, help="Path to the image", metavar="some image")
+    parser.add_argument("-i", "--input", type=str, required=True, help="path to the image", metavar="some image")
+    parser.add_argument("-p", "--prompt", type=str, help="optional custom prompt", metavar="prompt")
 
     parser.epilog = f"Bye"
 
@@ -77,6 +78,9 @@ def main():
 
     if args.input:
         result = process_image(path_input=args.input)
+        print(result)
+    elif args.input and args.prompt:
+        result = process_image(path_input=args.input, prompt=args.prompt)
         print(result)
     else:
         parser.print_help()
