@@ -59,7 +59,7 @@ def process_image(path_input: str, prompt: str = config.prompt.default_prompt) -
 def create_parser():
     parser = argparse.ArgumentParser(
         prog=f"{sys.argv[0]}",
-        description="Tool to use to describe content of an image",
+        description="Describe content of an image",
     )
     parser.add_argument("-v", "--version", dest="version", action="version", version=f"%(prog)% {config.version}")
 
