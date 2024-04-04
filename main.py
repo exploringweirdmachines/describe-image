@@ -76,7 +76,8 @@ def main():
     args = parser.parse_args()
 
     if args.input:
-        process_image(path_input=args.input)
+        result = process_image(path_input=args.input)
+        print(result)
     else:
         parser.print_help()
 
