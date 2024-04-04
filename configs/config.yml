@@ -1,0 +1,6 @@
+version: "0.1"
+
+# model card
+img_to_txt_model:
+  model: "vikhyatk/moondream2"
+  revision: "2024-04-02"
