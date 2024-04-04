@@ -17,7 +17,7 @@ options:
 
 Bye
 ```
-![Alt text](/resources/image_description.gif)
+![Alt text](/resources/img_description.gif)
 
 # Requirements
 
